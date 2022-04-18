@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/workers")
+@RequestMapping(value = "/trabalhador" +
+    "")
 public class WorkerResource {
 
     private Logger logger = LoggerFactory.getLogger(WorkerResource.class);
@@ -33,8 +34,17 @@ public class WorkerResource {
     }
     @GetMapping(value = "/{id}")
     public  ResponseEntity<Worker> findById(@PathVariable Long id){
-        logger.info("PORT = " + environment.getProperty("local.server.port"));
 
+        /*int x = 1;
+        if(x==1){
+            throw new RuntimeException("teste");
+        }*/
+        /*try {
+            Thread.sleep(3000L);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }*/
+        logger.info("PORT = " + environment.getProperty("local.server.port"));
 
         Worker obj = workerRepository.findById(id).get();
         return  ResponseEntity.ok(obj);

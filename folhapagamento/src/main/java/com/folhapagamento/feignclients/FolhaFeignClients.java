@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Component
-@FeignClient(name = "trabalhadores", path = "/workers")
+@FeignClient(name = "trabalhadores", path = "/trabalhador")
 public interface FolhaFeignClients {
     @GetMapping(value = "/{id}")
     ResponseEntity<Worker> findById(@PathVariable Long id);
