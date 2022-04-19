@@ -31,6 +31,7 @@ public class Usuario implements Serializable {
     public Usuario(Long id, String nome, String email, String password) {
         this.id = id;
         this.nome = nome;
+        //@Column(unique = true)
         this.email = email;
         this.password = password;
     }
