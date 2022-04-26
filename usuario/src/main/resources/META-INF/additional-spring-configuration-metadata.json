@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "spring.cloud.config.uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.config.uri."
+    }
+
+  ] }
